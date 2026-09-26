@@ -29,23 +29,7 @@ Bring your own base-model reports, waveforms, and historical action outcomes.
 
 ## Workflow
 
-```mermaid
-flowchart LR
-    R[Base ECG report] --> C[Select clinical claims]
-    K[Criterion library] --> V[Verify against criteria]
-    C --> V
-    W[Current ECG] --> T[Lead-aware ECG tools]
-    T --> V
-    V --> A[Evaluate report actions]
-    M[Repair advantage memory] --> A
-    A -->|Positive advantage| E[Local report repair]
-    A -->|No eligible edit| P[Preserve diagnoses]
-    E --> G[Report and evidence graphs]
-    P --> G
-    style V fill:#EAF0F5,stroke:#52718B
-    style M fill:#EEEAF3,stroke:#79648A
-    style E fill:#EAF2EA,stroke:#587B60
-```
+![ECG-RePAIR framework: ECG-aware planning, evidence-grounded verification, and memory-conditioned repair](assets/overview_revised.png)
 
 | Component | What it contributes |
 | :--- | :--- |
